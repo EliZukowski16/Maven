@@ -1,0 +1,119 @@
+15:39:23.607 [main] WARN  org.ssa.ironyard.web.SpringStarter - Will this show up?
+15:39:23.997 [main] INFO  org.ssa.ironyard.web.SpringStarter - Starting SpringStarter on PC23 with PID 5728 (C:\Users\admin\workspace\maven\my-app\target\classes started by admin in C:\Users\admin\workspace\maven\my-app)
+15:39:23.997 [main] DEBUG org.ssa.ironyard.web.SpringStarter - Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+15:39:23.997 [main] INFO  org.ssa.ironyard.web.SpringStarter - No active profile set, falling back to default profiles: default
+15:39:25.260 [main] DEBUG org.ssa.ironyard.web.TrieLoadingService - will attempt to load corncob.txt
+15:39:25.260 [main] DEBUG org.ssa.ironyard.web.TrieLoadingService - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:39:25.900 [main] INFO  org.ssa.ironyard.web.SpringStarter - Started SpringStarter in 2.2 seconds (JVM running for 5.132)
+15:39:42.426 [http-nio-8080-exec-1] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:39:42.426 [http-nio-8080-exec-1] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:39:50.776 [http-nio-8080-exec-2] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:39:50.776 [http-nio-8080-exec-2] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:39:55.814 [http-nio-8080-exec-4] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:39:55.814 [http-nio-8080-exec-4] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:39:59.651 [http-nio-8080-exec-5] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:39:59.651 [http-nio-8080-exec-5] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:40:03.785 [http-nio-8080-exec-6] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:40:03.785 [http-nio-8080-exec-6] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:40:06.892 [http-nio-8080-exec-8] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:40:06.892 [http-nio-8080-exec-8] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:40:14.977 [http-nio-8080-exec-9] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:40:14.977 [http-nio-8080-exec-9] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:40:21.934 [http-nio-8080-exec-1] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:40:21.934 [http-nio-8080-exec-1] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:41:56.525 [http-nio-8080-exec-4] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:41:56.525 [http-nio-8080-exec-4] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:43:21.320 [http-nio-8080-exec-7] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:43:21.320 [http-nio-8080-exec-7] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:43:26.646 [http-nio-8080-exec-8] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:43:26.646 [http-nio-8080-exec-8] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:43:30.642 [http-nio-8080-exec-9] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:43:30.642 [http-nio-8080-exec-9] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:43:35.447 [http-nio-8080-exec-1] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:43:35.447 [http-nio-8080-exec-1] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:43:56.417 [http-nio-8080-exec-2] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:43:56.432 [http-nio-8080-exec-2] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:44:03.084 [http-nio-8080-exec-4] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:44:03.084 [http-nio-8080-exec-4] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:44:12.059 [http-nio-8080-exec-5] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:44:12.059 [http-nio-8080-exec-5] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:44:15.206 [http-nio-8080-exec-7] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:44:15.206 [http-nio-8080-exec-7] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:44:34.022 [http-nio-8080-exec-9] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:44:34.022 [http-nio-8080-exec-9] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:44:43.011 [http-nio-8080-exec-10] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:44:43.011 [http-nio-8080-exec-10] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:44:50.650 [http-nio-8080-exec-3] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:44:50.650 [http-nio-8080-exec-3] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:44:55.386 [http-nio-8080-exec-2] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:44:55.386 [http-nio-8080-exec-2] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:45:00.282 [http-nio-8080-exec-4] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:45:00.282 [http-nio-8080-exec-4] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:45:03.190 [http-nio-8080-exec-5] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:45:03.190 [http-nio-8080-exec-5] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:45:13.813 [http-nio-8080-exec-8] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:45:13.813 [http-nio-8080-exec-8] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:45:26.854 [http-nio-8080-exec-10] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:45:26.854 [http-nio-8080-exec-10] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:45:32.763 [http-nio-8080-exec-1] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:45:32.763 [http-nio-8080-exec-1] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:45:46.586 [http-nio-8080-exec-2] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:45:46.586 [http-nio-8080-exec-2] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:45:51.841 [http-nio-8080-exec-4] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:45:51.841 [http-nio-8080-exec-4] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:49:23.504 [http-nio-8080-exec-7] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:49:23.504 [http-nio-8080-exec-7] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+15:49:42.728 [http-nio-8080-exec-9] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+15:49:42.728 [http-nio-8080-exec-9] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:00:01.542 [main] WARN  org.ssa.ironyard.web.SpringStarter - Will this show up?
+16:00:01.947 [main] INFO  org.ssa.ironyard.web.SpringStarter - Starting SpringStarter on PC23 with PID 5736 (C:\Users\admin\workspace\maven\my-app\target\classes started by admin in C:\Users\admin\workspace\maven\my-app)
+16:00:01.947 [main] DEBUG org.ssa.ironyard.web.SpringStarter - Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+16:00:01.947 [main] INFO  org.ssa.ironyard.web.SpringStarter - No active profile set, falling back to default profiles: default
+16:00:03.243 [main] DEBUG org.ssa.ironyard.web.TrieLoadingService - will attempt to load corncob.txt
+16:00:03.243 [main] DEBUG org.ssa.ironyard.web.TrieLoadingService - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:00:03.838 [main] INFO  org.ssa.ironyard.web.SpringStarter - Started SpringStarter in 2.187 seconds (JVM running for 5.13)
+16:00:13.782 [http-nio-8080-exec-1] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:00:13.782 [http-nio-8080-exec-1] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:00:16.923 [http-nio-8080-exec-2] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:00:16.923 [http-nio-8080-exec-2] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:06:55.884 [http-nio-8080-exec-5] INFO  org.ssa.ironyard.web.GreetingController - Greeting Given
+16:06:59.131 [http-nio-8080-exec-6] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:06:59.131 [http-nio-8080-exec-6] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:07:01.649 [http-nio-8080-exec-7] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:07:01.649 [http-nio-8080-exec-7] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:07:04.770 [http-nio-8080-exec-8] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:07:04.770 [http-nio-8080-exec-8] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:07:12.616 [http-nio-8080-exec-10] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:07:12.617 [http-nio-8080-exec-10] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:07:16.866 [http-nio-8080-exec-1] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:07:16.866 [http-nio-8080-exec-1] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:07:21.220 [http-nio-8080-exec-2] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:07:21.220 [http-nio-8080-exec-2] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:07:21.930 [http-nio-8080-exec-3] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:07:21.930 [http-nio-8080-exec-3] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:07:28.667 [http-nio-8080-exec-5] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:07:28.667 [http-nio-8080-exec-5] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:07:31.799 [http-nio-8080-exec-6] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:07:31.799 [http-nio-8080-exec-6] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:25:55.099 [http-nio-8080-exec-9] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:25:55.099 [http-nio-8080-exec-9] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:26:55.752 [http-nio-8080-exec-2] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:26:55.752 [http-nio-8080-exec-2] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:26:58.979 [http-nio-8080-exec-3] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:26:58.979 [http-nio-8080-exec-3] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:28:58.233 [http-nio-8080-exec-6] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:28:58.233 [http-nio-8080-exec-6] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:29:01.735 [http-nio-8080-exec-7] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:29:01.735 [http-nio-8080-exec-7] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:29:07.621 [http-nio-8080-exec-8] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:29:07.621 [http-nio-8080-exec-8] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:29:11.348 [http-nio-8080-exec-1] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:29:11.348 [http-nio-8080-exec-1] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:29:16.844 [http-nio-8080-exec-10] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:29:16.844 [http-nio-8080-exec-10] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:34:33.350 [http-nio-8080-exec-5] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:34:33.350 [http-nio-8080-exec-5] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:34:36.642 [http-nio-8080-exec-6] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:34:36.642 [http-nio-8080-exec-6] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
+16:34:40.191 [http-nio-8080-exec-7] DEBUG org.ssa.ironyard.web.TrieController - will attempt to load corncob.txt
+16:34:40.191 [http-nio-8080-exec-7] DEBUG org.ssa.ironyard.web.TrieController - file C:\Users\admin\workspace\maven\my-app\target\classes\corncob_lowercase.txt, exists? true
