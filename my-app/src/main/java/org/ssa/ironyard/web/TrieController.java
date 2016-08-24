@@ -1,8 +1,6 @@
 package org.ssa.ironyard.web;
 
-import java.io.File;
 import java.net.URISyntaxException;
-import java.net.URL;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -19,21 +17,31 @@ public class TrieController
 {
     static final Logger LOGGER = LogManager.getLogger(TrieController.class);
     @Autowired
-    TrieLoadingService loadedTrie;
-    
+    Text9Trie trie;
+
+    public void setTrie(Text9Trie trie)
+    {
+        this.trie = trie;
+    }
+
     @RequestMapping("/trie")
     @ResponseBody
     public String suggestions(HttpServletRequest request) throws URISyntaxException
     {
-        LOGGER.debug("will attempt to load corncob.txt");
-        URL resource = getClass().getClassLoader().getResource("corncob_lowercase.txt");
-        File file = new File(resource.toURI());
-        LOGGER.debug("file {}, exists? {}",file, file.exists());
-        if(Strings.isNotBlank(request.getParameter("digits")))
-           return String.join("<br/>", this.loadedTrie.suggestions(request.getParameter("digits")));
-        
-        return String.join("<br/>", "not", "yet", "implemented");
+        if (Strings.isNotBlank(request.getParameter("digits")))
+        {
+            if(request.getParameter("digits").matches("[0-9]*?"))
+            {
+                return String.join("<br/>", trie.suggest(request.getParameter("digits")));
+            }
             
+            return "Error: input must be numeric (0-9)";
+        }
+        
+        return "Error: can not process blank input";
+
     }
+    
+    
 
 }

@@ -1,1 +1,4 @@
 org\ssa\ironyard\AppTest.class
+org\ssa\ironyard\web\Mock9Trie.class
+org\ssa\ironyard\web\TrieControllerTest.class
+org\ssa\ironyard\web\TrieLoadingServiceTest.class
