@@ -6,8 +6,8 @@ elephant;africa,asia;Never forgets
 fish;africa,asia,australia,europe,north america,south america;Some species live both in freshwater and saltwater during their lifetimes
 gorilla;africa;Highly intelligent, and several individuals in captivity taught sign language
 horse;africa,asia,europe,north america,south america;Can sleep while stanind or lying down
-iguana;north america,south america;
-jackalope;north america;
+iguana;north america,south america;blank
+jackalope;north america;blank
 kangaroo;australia;Is the national symbol of Australia
 loris;asia;Has a very strong grip and can hang from branches for hours
 manatee;africa,north america,south america;May have been the original inspiration for folktales of mermaids
@@ -15,12 +15,12 @@ nightingale;africa,asia,europe;Has been in important symbol for poets throughout
 orangutan;asia;Can have an armspan up to 8 feet 
 piranha;south america;Can make a barking sound when threatened
 quail;africa,asia,europe,north america,south america;Uses dust baths to get rid of external parasites or pests
-rhinoceros;africa,asia;
-squirrel;africa,asia,europe,north america,south america;
-tree frog;africa,asia,europe,north america,south america;
-unicorn;north america;
-velociraptor;asia;
-whale;africa,antarctica,asia,europe,north america,south america;
-x-ray tetra;south america;
-yak;asia;
-zebu;asia;
+rhinoceros;africa,asia;blank
+squirrel;africa,asia,europe,north america,south america;blank
+tree frog;africa,asia,europe,north america,south america;blank
+unicorn;north america;blank
+velociraptor;asia;blank
+whale;africa,antarctica,asia,europe,north america,south america;blank
+x-ray tetra;south america;blank
+yak;asia;blank
+zebu;asia;blank
