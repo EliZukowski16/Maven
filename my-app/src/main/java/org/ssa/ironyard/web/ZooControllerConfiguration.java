@@ -71,14 +71,14 @@ public class ZooControllerConfiguration
         return ssaZooAnimals;
 
     }
-    
+
     @Bean(name = "SSAZooLinks")
-    public List<AnimalLink> ssaZooLinks(Map<String,Animal> ssaZooAnimal)
+    public List<AnimalLink> ssaZooLinks(Map<String, Animal> ssaZooAnimal)
     {
         List<AnimalLink> ssaZooLinks = new ArrayList<>();
-        
+
         ssaZooAnimal.keySet().stream().sorted().forEach(s -> ssaZooLinks.add(new AnimalLink(s, "/zoo/animals/" + s)));
-        
+
         return ssaZooLinks;
     }
 

@@ -8,14 +8,14 @@ public class Animal
     private String name;
     private List<String> continents;
     private String interestingFact;
-    
+
     public Animal()
     {
         name = "";
         continents = new ArrayList<>();
         interestingFact = "";
     }
-    
+
     public Animal(String name, List<String> continents, String interestingFact)
     {
         this.name = name;
@@ -51,5 +51,5 @@ public class Animal
     public void setInterestingFact(String interestingFact)
     {
         this.interestingFact = interestingFact;
-    }    
+    }
 }
