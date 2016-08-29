@@ -62,7 +62,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="success" classname="org.ssa.ironyard.web.TrieControllerTest" time="0"/>
+  <testcase name="success" classname="org.ssa.ironyard.web.TrieControllerTest" time="0.001"/>
   <testcase name="blankInput" classname="org.ssa.ironyard.web.TrieControllerTest" time="0.02"/>
-  <testcase name="badInput" classname="org.ssa.ironyard.web.TrieControllerTest" time="0.001"/>
+  <testcase name="badInput" classname="org.ssa.ironyard.web.TrieControllerTest" time="0"/>
 </testsuite>

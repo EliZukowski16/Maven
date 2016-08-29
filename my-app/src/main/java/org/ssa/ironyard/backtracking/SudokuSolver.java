@@ -6,6 +6,8 @@ public class SudokuSolver
 
     String[][] solvedBoard;
 
+    Cell startingCell;
+
     public SudokuSolver(String[][] initialBoard)
     {
         this.initialBoard = initialBoard;
@@ -43,51 +45,111 @@ public class SudokuSolver
             for (int j = boxStartCol; j <= boxEndCol; j++)
                 if (solvedBoard[i][j].equals(value))
                     return false;
-        
+
         return true;
     }
-    
-    Cell getNextCell(Cell currentCell)
+
+    Cell getBestCell()
     {
-        int row = currentCell.row;
-        int col = currentCell.col;
+        int numberSolved = 0;
+        int numberEmptyCells = 0;
         
-        if(col > 8)
+        
+        Cell bestCell = new Cell(0,0);
+
+        for (int row = 0; row < 9; row++)
         {
-            col = 0;
-            row++;
-        }
-        
-        if(row > 8)
-            return null;
-        
-        return new Cell(row, col);
-    }
-    
-    boolean solve(Cell currentCell)
-    {
-        if(currentCell == null)
-            return true;
-        
-        if(!solvedBoard[currentCell.row][currentCell.col].equals("0"))
-        {
-            return solve(getNextCell(currentCell));
-        }
-        
-        for(int i = 1; i < 10; i++)
-        {
-            if(isValid(currentCell, String.valueOf(i)))
+            for (int col = 0; col < 9; col++)
             {
-                solvedBoard[currentCell.row][currentCell.col] = String.valueOf(i);
-                if(solve(getNextCell(currentCell)))
+                if (initialBoard[row][col].equals("0"))
                 {
-                    return true;
+
+                    int count = 0;
+                    numberEmptyCells++;
+
+                    for (int i = 0; i < 9; i++)
+                    {
+                        if (!initialBoard[row][i].equals("0"))
+                            count++;
+                        
+                        
+                        if(!initialBoard[i][col].equals("0"))
+                            count++;
+                    }
+                    
+                    if(count > numberSolved)
+                    {
+                        bestCell = new Cell(row, col);
+                        numberSolved = count;
+                    }
                 }
-                solvedBoard[currentCell.row][currentCell.col] = "0";
             }
         }
         
+        if(numberEmptyCells == 0)
+            return null;
+        
+        return bestCell;
+        
+        
+    }
+
+    boolean solve(Cell currentCell)
+    {
+        
+        if(currentCell == null)
+            return true;
+
+        for (int i = 1; i < 10; i++)
+        {
+            if (isValid(currentCell, String.valueOf(i)))
+            {
+                solvedBoard[currentCell.row][currentCell.col] = String.valueOf(i);
+                
+                if (solve(getBestCell()))
+                    return true;
+                
+                solvedBoard[currentCell.row][currentCell.col] = "0";
+            }
+        }
+
         return false;
+    }
+
+    public String solveBoard()
+    {
+        String solvedString = "";
+        
+        startingCell = getBestCell();
+
+        this.solve(startingCell);
+
+        for (int i = 0; i < 9; i++)
+        {
+            for (int j = 0; j < 9; j++)
+            {
+                solvedString = solvedString + solvedBoard[i][j];
+            }
+        }
+
+        return solvedString;
+    }
+
+    public String toString()
+    {
+        String board = "";
+
+        for (int i = 0; i < 9; i++)
+        {
+            for (int j = 0; j < 9; j++)
+            {
+                board = board + solvedBoard[i][j] + " ";
+            }
+
+            board = board + "\n";
+        }
+
+        return board;
     }
 
 }
