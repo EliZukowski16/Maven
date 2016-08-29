@@ -2,9 +2,9 @@ package org.ssa.ironyard.backtracking;
 
 public class SudokuSolver
 {
-    final String[][] initialBoard;
+    private final String[][] initialBoard;
 
-    String[][] solvedBoard;
+    private String[][] solvedBoard;
 
     Cell startingCell;
 
@@ -14,7 +14,22 @@ public class SudokuSolver
         this.solvedBoard = initialBoard;
     }
 
-    class Cell
+    public SudokuSolver()
+    {
+        this.initialBoard = new String[9][9];
+        
+        for(int row = 0; row < 9; row++)
+        {
+            for(int col = 0; col < 9; col++)
+            {
+                this.getInitialBoard()[row][col] = "0";
+            }
+        }
+        
+        this.solvedBoard = this.initialBoard;
+    }
+
+    private class Cell
     {
         int row, col;
 
@@ -25,15 +40,15 @@ public class SudokuSolver
         }
     }
 
-    boolean isValid(Cell cell, String value)
+    private boolean isValid(Cell cell, String value)
     {
 
         for (int i = 0; i < 9; i++)
-            if (solvedBoard[cell.row][i].equals(value))
+            if (getSolvedBoard()[cell.row][i].equals(value))
                 return false;
 
         for (int i = 0; i < 9; i++)
-            if (solvedBoard[i][cell.col].equals(value))
+            if (getSolvedBoard()[i][cell.col].equals(value))
                 return false;
 
         int boxStartRow = (cell.row / 3) * 3;
@@ -43,13 +58,13 @@ public class SudokuSolver
 
         for (int i = boxStartRow; i <= boxEndRow; i++)
             for (int j = boxStartCol; j <= boxEndCol; j++)
-                if (solvedBoard[i][j].equals(value))
+                if (getSolvedBoard()[i][j].equals(value))
                     return false;
 
         return true;
     }
 
-    Cell getBestCell()
+    private Cell getBestCell()
     {
         int numberSolved = 0;
         int numberEmptyCells = 0;
@@ -61,7 +76,7 @@ public class SudokuSolver
         {
             for (int col = 0; col < 9; col++)
             {
-                if (initialBoard[row][col].equals("0"))
+                if (getInitialBoard()[row][col].equals("0"))
                 {
 
                     int count = 0;
@@ -69,11 +84,11 @@ public class SudokuSolver
 
                     for (int i = 0; i < 9; i++)
                     {
-                        if (!initialBoard[row][i].equals("0"))
+                        if (!getInitialBoard()[row][i].equals("0"))
                             count++;
                         
                         
-                        if(!initialBoard[i][col].equals("0"))
+                        if(!getInitialBoard()[i][col].equals("0"))
                             count++;
                     }
                     
@@ -94,7 +109,7 @@ public class SudokuSolver
         
     }
 
-    boolean solve(Cell currentCell)
+    private boolean solve(Cell currentCell)
     {
         
         if(currentCell == null)
@@ -104,12 +119,12 @@ public class SudokuSolver
         {
             if (isValid(currentCell, String.valueOf(i)))
             {
-                solvedBoard[currentCell.row][currentCell.col] = String.valueOf(i);
+                getSolvedBoard()[currentCell.row][currentCell.col] = String.valueOf(i);
                 
                 if (solve(getBestCell()))
                     return true;
                 
-                solvedBoard[currentCell.row][currentCell.col] = "0";
+                getSolvedBoard()[currentCell.row][currentCell.col] = "0";
             }
         }
 
@@ -128,7 +143,7 @@ public class SudokuSolver
         {
             for (int j = 0; j < 9; j++)
             {
-                solvedString = solvedString + solvedBoard[i][j];
+                solvedString = solvedString + getSolvedBoard()[i][j];
             }
         }
 
@@ -143,13 +158,23 @@ public class SudokuSolver
         {
             for (int j = 0; j < 9; j++)
             {
-                board = board + solvedBoard[i][j] + " ";
+                board = board + getSolvedBoard()[i][j] + " ";
             }
 
             board = board + "\n";
         }
 
         return board;
+    }
+
+    public String[][] getSolvedBoard()
+    {
+        return solvedBoard;
+    }
+
+    public String[][] getInitialBoard()
+    {
+        return initialBoard;
     }
 
 }

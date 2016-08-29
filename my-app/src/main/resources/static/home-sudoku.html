@@ -1,176 +1,248 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>SSA Sudoku</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="jquery-3.1.0.min.js"></script>
-        <style type="text/css">
-            h2 { text-align: center; margin: 1em 0 2em }
-            input { color: #f1f; border-style: solid; border-width: 2px 2px 0 0; border-color: #ddd }
-            input[type='radio'] { margin: 0 .5em 1em }
-            input.fixed { color: #000 }
-            input.square-right { border-right-width: 3px; border-right-color: #888 }
-            input.square-top { border-top-width: 3px; border-top-color: #888 }
-            input.top-row { border-top-width: 4px; border-top-color: #111; }
-            input.bottom-row { border-bottom-width: 4px; border-bottom-color: #111 }
-            input.far-right { border-right-width: 4px; border-right-color: #111 }
-            input.far-left { border-left-width: 4px; border-left-color: #111 }
-            .row { font-size: 0px; margin: 0 20% }
+<head>
+<title>SSA Sudoku</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="jquery-3.1.0.min.js"></script>
+<style type="text/css">
+h2 {
+	text-align: center;
+	margin: 1em 0 2em
+}
 
-            #game { width: 70%; margin: 0 auto; text-align: center; display: none }
-            #level { width: 70%; margin: 0 auto; text-align: center }
-            #controls { display: inline-block; text-align: left}
-            .cell { width: 1.5em; border: 1px solid #aaa; height: 1.5em; display: inline-table;
-                    font-size: 20pt; text-align: center; vertical-align: top }
+input {
+	color: #f1f;
+	border-style: solid;
+	border-width: 2px 2px 0 0;
+	border-color: #ddd
+}
 
-            /* .message { position: fixed; top: 5%; margin: 0 auto; width: 20%} */
-            #message { color: #f1f; display: none; font: bold 1.25em "Tahoma"; margin: 0 0 1em }
-            #message.incorrect { color: #e12 }
-            button { border-radius: 8pt; font: 1.25em "Comic Sans MS"; }
-            #solution, #reset {  margin: 1em .5em }
+input[type='radio'] {
+	margin: 0 .5em 1em
+}
+
+input.fixed {
+	color: #000
+}
+
+input.square-right {
+	border-right-width: 3px;
+	border-right-color: #888
+}
+
+input.square-top {
+	border-top-width: 3px;
+	border-top-color: #888
+}
+
+input.top-row {
+	border-top-width: 4px;
+	border-top-color: #111;
+}
+
+input.bottom-row {
+	border-bottom-width: 4px;
+	border-bottom-color: #111
+}
+
+input.far-right {
+	border-right-width: 4px;
+	border-right-color: #111
+}
+
+input.far-left {
+	border-left-width: 4px;
+	border-left-color: #111
+}
+
+.row {
+	font-size: 0px;
+	margin: 0 20%
+}
+
+input.cell:focus {
+	background: aqua;
+}
+
+#game {
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+	display: none
+}
+
+#level {
+	width: 70%;
+	margin: 0 auto;
+	text-align: center
+}
+
+#controls {
+	display: inline-block;
+	text-align: left
+}
+
+.cell {
+	width: 1.5em;
+	border: 1px solid #aaa;
+	height: 1.5em;
+	display: inline-table;
+	font-size: 20pt;
+	text-align: center;
+	vertical-align: top
+}
+
+/* .message { position: fixed; top: 5%; margin: 0 auto; width: 20%} */
+#message {
+	color: #f1f;
+	display: none;
+	font: bold 1.25em "Tahoma";
+	margin: 0 0 1em
+}
+
+#message.incorrect {
+	color: #e12
+}
+
+button {
+	border-radius: 8pt;
+	font: 1.25em "Comic Sans MS";
+}
+
+#solution, #reset {
+	margin: 1em .5em
+}
+</style>
+</head>
+<body>
+	<h2>Welcome to Sudoku</h2>
+	<section id="game">
+		<div class="incorrect" id="message">Congratulations, you solved
+			the puzzle!</div>
+		<div class="row">
+			<input id="cell-0" class="cell top-row far-left" maxlength="1">
+			<input id="cell-1" class="cell top-row" maxlength="1"> <input
+				id="cell-2" class="cell top-row square-right" maxlength="1">
+
+			<input id="cell-3" class="cell top-row" maxlength="1"> <input
+				id="cell-4" class="cell top-row" maxlength="1"> <input
+				id="cell-5" class="cell top-row square-right" maxlength="1">
+
+			<input id="cell-6" class="cell top-row" maxlength="1"> <input
+				id="cell-7" class="cell top-row" maxlength="1"> <input
+				id="cell-8" class="cell top-row far-right" maxlength="1">
+		</div>
+		<div class="row">
+			<input id="cell-9" class="cell far-left" maxlength="1"> <input
+				id="cell-10" class="cell" maxlength="1"> <input id="cell-11"
+				class="cell square-right" maxlength="1"> <input id="cell-12"
+				class="cell" maxlength="1"> <input id="cell-13" class="cell"
+				maxlength="1"> <input id="cell-14" class="cell square-right"
+				maxlength="1"> <input id="cell-15" class="cell"
+				maxlength="1"> <input id="cell-16" class="cell"
+				maxlength="1"> <input id="cell-17" class="cell far-right"
+				maxlength="1">
+		</div>
+		<div class="row">
+			<input id="cell-18" class="cell far-left" maxlength="1"> <input
+				id="cell-19" class="cell" maxlength="1"> <input id="cell-20"
+				class="cell square-right" maxlength="1"> <input id="cell-21"
+				class="cell" maxlength="1"> <input id="cell-22" class="cell"
+				maxlength="1"> <input id="cell-23" class="cell square-right"
+				maxlength="1"> <input id="cell-24" class="cell"
+				maxlength="1"> <input id="cell-25" class="cell"
+				maxlength="1"> <input id="cell-26" class="cell far-right"
+				maxlength="1">
+		</div>
+		<div class="row">
+			<input id="cell-27" class="cell square-top far-left" maxlength="1">
+			<input id="cell-28" class="cell square-top" maxlength="1"> <input
+				id="cell-29" class="cell square-top square-right" maxlength="1">
+
+			<input id="cell-30" class="cell square-top" maxlength="1"> <input
+				id="cell-31" class="cell square-top" maxlength="1"> <input
+				id="cell-32" class="cell square-top square-right" maxlength="1">
+
+			<input id="cell-33" class="cell square-top" maxlength="1"> <input
+				id="cell-34" class="cell square-top" maxlength="1"> <input
+				id="cell-35" class="cell square-top far-right" maxlength="1">
+		</div>
+		<div class="row">
+			<input id="cell-36" class="cell far-left" maxlength="1"> <input
+				id="cell-37" class="cell" maxlength="1"> <input id="cell-38"
+				class="cell square-right" maxlength="1"> <input id="cell-39"
+				class="cell" maxlength="1"> <input id="cell-40" class="cell"
+				maxlength="1"> <input id="cell-41" class="cell square-right"
+				maxlength="1"> <input id="cell-42" class="cell"
+				maxlength="1"> <input id="cell-43" class="cell"
+				maxlength="1"> <input id="cell-44" class="cell far-right"
+				maxlength="1">
+		</div>
+		<div class="row">
+			<input id="cell-45" class="cell far-left" maxlength="1"> <input
+				id="cell-46" class="cell" maxlength="1"> <input id="cell-47"
+				class="cell square-right" maxlength="1"> <input id="cell-48"
+				class="cell" maxlength="1"> <input id="cell-49" class="cell"
+				maxlength="1"> <input id="cell-50" class="cell square-right"
+				maxlength="1"> <input id="cell-51" class="cell"
+				maxlength="1"> <input id="cell-52" class="cell"
+				maxlength="1"> <input id="cell-53" class="cell far-right"
+				maxlength="1">
+		</div>
+		<div class="row">
+			<input id="cell-54" class="cell square-top far-left" maxlength="1">
+			<input id="cell-55" class="cell square-top" maxlength="1"> <input
+				id="cell-56" class="cell square-top square-right" maxlength="1">
+
+			<input id="cell-57" class="cell square-top" maxlength="1"> <input
+				id="cell-58" class="cell square-top" maxlength="1"> <input
+				id="cell-59" class="cell square-top square-right" maxlength="1">
+
+			<input id="cell-60" class="cell square-top" maxlength="1"> <input
+				id="cell-61" class="cell square-top" maxlength="1"> <input
+				id="cell-62" class="cell square-top far-right" maxlength="1">
+		</div>
+		<div class="row">
+			<input id="cell-63" class="cell far-left" maxlength="1"> <input
+				id="cell-64" class="cell" maxlength="1"> <input id="cell-65"
+				class="cell square-right" maxlength="1"> <input id="cell-66"
+				class="cell" maxlength="1"> <input id="cell-67" class="cell"
+				maxlength="1"> <input id="cell-68" class="cell square-right"
+				maxlength="1"> <input id="cell-69" class="cell"
+				maxlength="1"> <input id="cell-70" class="cell"
+				maxlength="1"> <input id="cell-71" class="cell far-right"
+				maxlength="1">
+		</div>
+		<div class="row">
+			<input id="cell-72" class="cell far-left bottom-row" maxlength="1">
+			<input id="cell-73" class="cell bottom-row" maxlength="1"> <input
+				id="cell-74" class="cell square-right bottom-row" maxlength="1">
+
+			<input id="cell-75" class="cell bottom-row" maxlength="1"> <input
+				id="cell-76" class="cell bottom-row" maxlength="1"> <input
+				id="cell-77" class="cell square-right bottom-row" maxlength="1">
+
+			<input id="cell-78" class="cell bottom-row" maxlength="1"> <input
+				id="cell-79" class="cell bottom-row" maxlength="1"> <input
+				id="cell-80" class="cell far-right bottom-row" maxlength="1">
+		</div>
+		<button id="solution">Check</button>
+		<button id="reset">Start Over</button>
+		<button id="main-menu">Choose Another</button>
+	</section>
+	<section id='level'>
+		<div id="controls">
+			<input name="how-hard" type="radio" value="easy">Easy<br>
+			<input name="how-hard" type="radio" value="medium" checked>Medium<br>
+			<input name="how-hard" type="radio" value="hard">Difficult<br>
+			<button id="start">Start game</button>
+		</div>
+	</section>
 
 
-        </style>
-    </head>
-    <body>
-        <h2>Welcome to Sudoku</h2>
-        <section id="game">
-            <div class="incorrect" id="message">
-                Congratulations, you solved the puzzle!
-            </div>
-            <div class="row">
-                <input id="cell-0" class="cell top-row far-left" maxlength="1">
-                <input id="cell-1" class="cell top-row" maxlength="1">
-                <input id="cell-2" class="cell top-row square-right" maxlength="1">
-
-                <input id="cell-3" class="cell top-row" maxlength="1">
-                <input id="cell-4" class="cell top-row" maxlength="1">
-                <input id="cell-5" class="cell top-row square-right" maxlength="1">
-
-                <input id="cell-6" class="cell top-row" maxlength="1">
-                <input id="cell-7" class="cell top-row" maxlength="1">
-                <input id="cell-8" class="cell top-row far-right" maxlength="1">
-            </div>
-            <div class="row">
-                <input id="cell-9" class="cell far-left" maxlength="1">
-                <input id="cell-10" class="cell" maxlength="1">
-                <input id="cell-11" class="cell square-right" maxlength="1">
-
-                <input id="cell-12" class="cell" maxlength="1">
-                <input id="cell-13" class="cell" maxlength="1">
-                <input id="cell-14" class="cell square-right" maxlength="1">
-
-                <input id="cell-15" class="cell" maxlength="1">
-                <input id="cell-16" class="cell" maxlength="1">
-                <input id="cell-17" class="cell far-right" maxlength="1">
-            </div>
-            <div class="row">
-                <input id="cell-18" class="cell far-left" maxlength="1">
-                <input id="cell-19" class="cell" maxlength="1">
-                <input id="cell-20" class="cell square-right" maxlength="1">
-
-                <input id="cell-21" class="cell" maxlength="1">
-                <input id="cell-22" class="cell" maxlength="1">
-                <input id="cell-23" class="cell square-right" maxlength="1">
-
-                <input id="cell-24" class="cell" maxlength="1">
-                <input id="cell-25" class="cell" maxlength="1">
-                <input id="cell-26" class="cell far-right" maxlength="1">
-            </div>
-            <div class="row">
-                <input id="cell-27" class="cell square-top far-left" maxlength="1">
-                <input id="cell-28" class="cell square-top" maxlength="1">
-                <input id="cell-29" class="cell square-top square-right" maxlength="1">
-
-                <input id="cell-30" class="cell square-top" maxlength="1">
-                <input id="cell-31" class="cell square-top" maxlength="1">
-                <input id="cell-32" class="cell square-top square-right" maxlength="1">
-
-                <input id="cell-33" class="cell square-top" maxlength="1">
-                <input id="cell-34" class="cell square-top" maxlength="1">
-                <input id="cell-35" class="cell square-top far-right" maxlength="1">
-            </div>
-            <div class="row">
-                <input id="cell-36" class="cell far-left" maxlength="1">
-                <input id="cell-37" class="cell" maxlength="1">
-                <input id="cell-38" class="cell square-right" maxlength="1">
-
-                <input id="cell-39" class="cell" maxlength="1">
-                <input id="cell-40" class="cell" maxlength="1">
-                <input id="cell-41" class="cell square-right" maxlength="1">
-
-                <input id="cell-42" class="cell" maxlength="1">
-                <input id="cell-43" class="cell" maxlength="1">
-                <input id="cell-44" class="cell far-right" maxlength="1">
-            </div>
-            <div class="row">
-                <input id="cell-45" class="cell far-left" maxlength="1">
-                <input id="cell-46" class="cell" maxlength="1">
-                <input id="cell-47" class="cell square-right" maxlength="1">
-
-                <input id="cell-48" class="cell" maxlength="1">
-                <input id="cell-49" class="cell" maxlength="1">
-                <input id="cell-50" class="cell square-right" maxlength="1">
-
-                <input id="cell-51" class="cell" maxlength="1">
-                <input id="cell-52" class="cell" maxlength="1">
-                <input id="cell-53" class="cell far-right" maxlength="1">
-            </div>
-            <div class="row">
-                <input id="cell-54" class="cell square-top far-left" maxlength="1">
-                <input id="cell-55" class="cell square-top" maxlength="1">
-                <input id="cell-56" class="cell square-top square-right" maxlength="1">
-
-                <input id="cell-57" class="cell square-top" maxlength="1">
-                <input id="cell-58" class="cell square-top" maxlength="1">
-                <input id="cell-59" class="cell square-top square-right" maxlength="1">
-
-                <input id="cell-60" class="cell square-top" maxlength="1">
-                <input id="cell-61" class="cell square-top" maxlength="1">
-                <input id="cell-62" class="cell square-top far-right" maxlength="1">
-            </div>
-            <div class="row">
-                <input id="cell-63" class="cell far-left" maxlength="1">
-                <input id="cell-64" class="cell" maxlength="1">
-                <input id="cell-65" class="cell square-right" maxlength="1">
-
-                <input id="cell-66" class="cell" maxlength="1">
-                <input id="cell-67" class="cell" maxlength="1">
-                <input id="cell-68" class="cell square-right" maxlength="1">
-
-                <input id="cell-69" class="cell" maxlength="1">
-                <input id="cell-70" class="cell" maxlength="1">
-                <input id="cell-71" class="cell far-right" maxlength="1">
-            </div>
-            <div class="row">
-                <input id="cell-72" class="cell far-left bottom-row" maxlength="1">
-                <input id="cell-73" class="cell bottom-row" maxlength="1">
-                <input id="cell-74" class="cell square-right bottom-row" maxlength="1">
-
-                <input id="cell-75" class="cell bottom-row" maxlength="1">
-                <input id="cell-76" class="cell bottom-row" maxlength="1">
-                <input id="cell-77" class="cell square-right bottom-row" maxlength="1">
-
-                <input id="cell-78" class="cell bottom-row" maxlength="1">
-                <input id="cell-79" class="cell bottom-row" maxlength="1">
-                <input id="cell-80" class="cell far-right bottom-row" maxlength="1">
-            </div>
-            <button id="solution">Check</button>
-            <button id="reset">Start Over</button>
-        </section>
-        <section id='level'>
-            <div id="controls">
-                <input name="how-hard" type="radio" value="easy">Easy<br>
-                <input name="how-hard" type="radio" value="medium" checked>Medium<br>
-                <input name="how-hard" type="radio" value="hard">Difficult<br>
-                <button id="start">Start game</button>
-            </div>
-        </section>
-
-
-        <script type="text/javascript">
+	<script type="text/javascript">
             (function()
             {
                 $('#start').click(function(ev)
@@ -181,7 +253,73 @@
                 });
                 $('#reset').click(reset);
                 $('#solution').click(check);
+                $('#main-menu').click(function(ev)
+                {
+                location.reload(true);
+                });
+                $("#game").keydown(navigate);
             })();
+            function navigate(evt)
+            {
+            	switch(evt.which)
+            	{
+            	case 37:
+            		return leftKey(evt.target);
+            	case 38:
+            		return upKey(evt.target);
+            	case 39:
+            		return rightKey(evt.target);
+            	case 40:
+            		return downKey(evt.target);
+            	default:
+            		return true;
+            	}
+            }
+            
+            function leftKey(cell)
+            {
+            	var pos = cell.id.slice(5) | 0;
+            	if(pos % 9 == 0)
+            		pos += 8;
+            	else
+            		pos--;
+            	$('#cell-' + pos).focus();
+            	return true;
+            }
+            
+            function rightKey(cell)
+            {
+            	var pos = cell.id.slice(5) | 0;
+            	if((pos + 1) % 9 == 0)
+            		pos -= 8;
+            	else
+            		pos ++;
+            	$('#cell-' + pos).focus();
+            	return true;
+            }
+            
+            function upKey(cell)
+            {
+            	var pos = cell.id.slice(5) | 0;
+            	if(pos < 9)
+            		pos += 72;
+            	else
+            		pos -= 9;
+            	$('#cell-' + pos).focus();
+            	return true;
+            }
+            
+            function downKey(cell)
+            {
+            	var pos = cell.id.slice(5) | 0;
+            	if(pos > 71)
+            		pos -= 72;
+            	else
+            		pos += 9;
+            	$('#cell-' + pos).focus();
+            	return true;
+            }
+            
             function sudokuInitialize(arg)
             {
                 $('#game').data('game-id', arg['game'])
@@ -289,8 +427,8 @@
             }
 
         </script>
-    </body>
-    <!-- var cell = $('#cell-0');
+</body>
+<!-- var cell = $('#cell-0');
 cell.addClass('fixed');
 cell.val(3)
 cell.attr('readonly', 'readonly') 
