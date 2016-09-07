@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Rhinoceros</title>
+<meta charset="UTF-8" />
+<style type="text/css">
+header {
+	text-align: center;
+	font-size: 2.5em;
+	background: mintcream;
+	border-width: thin;
+	border-style: solid;
+	border-left-style: none;
+	border-bottom-right-radius: 1em;
+	border-top-right-radius: 1em;
+}
+
+body {
+	margin-left:0;
+}
+
+.main-container {
+	display: -webkit-inline-flex;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.flex-container {
+	display: -webkit-inline-flex;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	flex-grow:
+}
+
+.flex-item {
+	max-width: 100%;
+	height: auto;
+}
+
+#top {
+	font-size: .6em;
+}
+
+#bottom {
+	font-size: 1em;
+}
+
+.menu {
+	list-style-type: none;
+	text-align: center;
+}
+
+.list-item {
+	text-align: center;
+	margin: .2em;
+	display: inline;
+}
+
+footer {
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.2em;
+	font-style: italic;
+}
+
+a:link {
+	text-decoration: none;
+	color: black;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:HOVER {
+	color: red;
+}
+</style>
+</head>
+<body>
+
+	<header>
+		<h2 style="margin: 0em">SSA Zoo</h2>
+		<nav class="menu" id="top">
+			<ul>
+				<li class="list-item"><a href="home">Home</a></li>
+				<li class="list-item"><a href="register">Register</a></li>
+				<li class="list-item"><a href="sign-in">Sign-in</a></li>
+				<li class="list-item"><a href="sign-out">Sign-out</a></li>
+
+			</ul>
+		</nav>
+	</header>
+
+	<nav class="menu" style="font-size: 1.2em">
+		<ul>
+			<li class="list-item"><a href="previous">&lt;&lt;</a></li>
+			<li class="list-item"><a href="edit">Edit</a></li>
+			<li class="list-item"><a href="add">Add</a></li>
+			<li class="list-item"><a href="next">&gt;&gt;</a></li>
+		</ul>
+	</nav>
+
+	<section class="main-container">
+		<article class="flex-container">
+
+			<div class="flex-item">
+				<h2>Rhinoceros</h2>
+			</div>
+
+			<div class="flex-item">
+				<h2>Continents:</h2>
+				<ul>
+					<li>Africa</li>
+					<li>Asia</li>
+				</ul>
+			</div>
+
+			<div class="flex-item">
+				<h2>Fun Fact</h2>
+				<p>Largest land animal after elephants</p>
+			</div>
+
+		</article>
+
+		<aside class="flex-container">
+			<div>
+				<img class="flex-item" alt=""
+					src="C:\Users\admin\workspace\FrontEnd\rhinoceros.jpg" />
+			</div>
+		</aside>
+	</section>
+
+
+
+	<footer>
+
+		<nav class="menu" id="bottom">
+			<ul>
+				<li class="list-item"><a href="home">Home</a></li>
+				<li class="list-item"><a href="register">Register</a></li>
+				<li class="list-item"><a href="sign-in">Sign-in</a></li>
+				<li class="list-item"><a href="sign-out">Sign-out</a></li>
+			</ul>
+		</nav>
+
+		<h5>SSA Zoo</h5>
+
+	</footer>
+</body>
+</html>
