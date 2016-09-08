@@ -20,11 +20,20 @@ body {
 	margin-left: 0;
 }
 
+.form-container {
+	display: -webkit-inline-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+
 .main-container {
 	display: -webkit-inline-flex;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	align-content: center;
 	flex-wrap: wrap;
 }
 
@@ -33,7 +42,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: auto;
-	flex-grow:
 }
 
 .flex-item {
@@ -107,34 +115,47 @@ a:HOVER {
 		</ul>
 	</nav>
 
-	<section class="main-container">
-		<article class="flex-container">
+	<form class="form-container">
+		<section class="main-container">
+			<article class="flex-container">
 
-			<div class="flex-item">
-				<h2>Rhinoceros</h2>
-			</div>
+				<div class="flex-item">
+					<h2>Animal Name:</h2>
+					<input type="text" name="animalname" value="Rhinoceros">
+				</div>
 
-			<div class="flex-item">
-				<h2>Continents:</h2>
-				<ul>
-					<li>Africa</li>
-					<li>Asia</li>
-				</ul>
-			</div>
-			
-			<div class="flex-item">
-				<h2>Fun Fact</h2>
-				<p>Largest land animal after elephants</p>
-			</div>
-		</article>
+				<div class="flex-item">
+					<h2>Continents:</h2>
+					<input type="checkbox" name="continentAfrica" value="Africa" checked>Africa<br />
+					<input type="checkbox" name="continentAntarctica" value="Antarctica">Antarctica<br /> 
+					<input type="checkbox" name="continentAsia" value="Asia" checked>Asia<br />
+					<input type="checkbox" name="continentAustralia" value="Australia">Australia<br />
+					<input type="checkbox" name="continentEurope" value="Europe">Europe<br />
+					<input type="checkbox" name="continentNAmerica" value="NAmerica">North
+					America<br /> <input type="checkbox" name="continentSAmerica"
+						value="SAmerica">South America
+				</div>
 
-		<aside class="flex-container">
-			<div>
+				<div class="flex-item">
+					<h2>Fun Fact</h2>
+					<textarea rows="8" cols="30" name="funfact">Largest land animal after elephants</textarea>
+				</div>
+			</article>
+
+			<aside class="flex-container">
+				<div class="flex-item">
+					Upload an image of the animal<br /> <input type="file"
+						name="animalimage">
+				</div>
 				<img class="flex-item" alt=""
 					src="C:\Users\admin\workspace\FrontEnd\rhinoceros.jpg" />
-			</div>
-		</aside>
-	</section>
+			</aside>
+		</section>
+		<div class="main-container">
+			<input class="flex-item" type="submit"
+				value="Submit Changes">
+		</div>
+	</form>
 
 	<footer>
 		<nav class="menu" id="bottom">

@@ -16,7 +16,13 @@ header {
 	border-top-right-radius: 1em;
 }
 
+
+html {
+	height: 75%;
+}
+
 body {
+	height: 100%;
 	margin-left: 0;
 }
 
@@ -26,14 +32,14 @@ body {
 	justify-content: space-around;
 	align-content: space-around;
 	flex-flow: column wrap;
-	max-height: 600px;
+	max-height: 100%;
 }
 
 .flex-item {
 	width: 100px;
 }
 
-div:NTH-OF-type(2n) {
+div.flex-item:NTH-OF-type(2n) {
 	background: lightgrey;
 }
 
@@ -84,18 +90,19 @@ a:HOVER {
 }
 
 .animal-name {
-	text-align: center;
+	display: block;
 	font-weight: bold;
-	padding: 0.2em;
 	margin: 0.3em 0.2em 0 0.2em;
 	padding: 0.2em;
+	text-align: center;
 }
 
 .animal-actions {
-	text-align: center;
+	display: block;
 	padding: 0.2em;
 	margin: 0 0.2em 0.3em 0.2em;
 	padding: 0.2em;
+	text-align: center;
 }
 </style>
 </head>
@@ -105,7 +112,7 @@ a:HOVER {
 		<h2 style="margin: 0em">SSA Zoo</h2>
 		<nav class="menu" id="top">
 			<ul>
-				<li class="menu-item"><a href="home">Home</a></li>
+				<li class="menu-item"><a href="index.html">Home</a></li>
 				<li class="menu-item"><a href="register">Register</a></li>
 				<li class="menu-item"><a href="sign-in">Sign-in</a></li>
 				<li class="menu-item"><a href="sign-out">Sign-out</a></li>
@@ -116,215 +123,213 @@ a:HOVER {
 
 	<section class="main-container">
 		<div class="flex-item">
+			<a class="animal-name" href="Aardvark">Aardvark</a> 
+			<a class="animal-actions" href="edit">Edit</a>
+		</div>
+		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Baboon">Baboon</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Chimpanzee">Chimpanzee</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Donkey">Donkey</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Elephant">Elephant</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Fish">Fish</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Gorilla">Gorilla</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Horse">Horse</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Iguana">Iguana</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Jackalope">Jackalope</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Kangaroo">Kangaroo</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Loris">Loris</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Manatee">Manatee</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Nightingale">Nightingale</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Orangutan">Orangutan</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Piranha">Piranha</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Quail">Quail</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="rhinoceros.html">Rhinoceros</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
+				<a href="rhinoceros_edit.html">Edit</a>
+			</p>
+		</div>
+		<div class="flex-item">
+			<p class="animal-name">
+				<a href="Squirrel">Squirrel</a>
+			</p>
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Tree Frog">Tree Frog</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Unicorn">Unicorn</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Velociraptor">Velociraptor</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Whale">Whale</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="X-Ray Tetra">X-Ray Tetra</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Yak">Yak</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="Zebu">Zebu</a>
 			</p>
-			<p class="animal-actions">	
+			<p class="animal-actions">
 				<a href="edit">Edit</a>
 			</p>
 		</div>
 		<div class="flex-item">
 			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
+				<a href="add">Add New Animal</a>
 			</p>
-			<p class="animal-actions">	
-				<a href="edit">Edit</a>
-			</p>
-		</div>
-		<div class="flex-item">
-			<p class="animal-name">
-				<a href="Aardvark">Aardvark</a>
-			</p>
-			<p class="animal-actions">	
-				<a href="edit">Edit</a>
-			</p>
-		</div>
-		<div class="flex-item">
-			<p class="animal-name">Add New Animal</p>
 		</div>
 	</section>
 
